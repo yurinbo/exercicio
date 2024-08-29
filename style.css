@@ -1,0 +1,72 @@
+body{
+    text-align: center;
+    background-color: #ffa322;
+    color:rgb(255, 255, 255);
+    font: 10pt Arial; 
+}
+
+button{
+    transition: .2s;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: #383B42;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+button:hover {
+    transform: scale(1.15);
+}
+
+.primeira{
+    display: flex;
+    justify-content: space-around;
+}
+
+#resultado{
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 400px;
+    height: 200px;
+    color: #383B42;
+    font-size: 15px;
+    overflow: auto;
+}
+
+
+.codigoo{
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 400px;
+    height: 200px;
+    color: #383B42;
+}
+
+
+input[name="t2"],[name="t1"] {
+    color: black;
+    background-color: white;
+    height: 30px;
+}
+
+
+h2 {
+    color: rgb(0, 0, 0);
+}
+
+input {
+    transition: .2s;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: #383B42;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+unput:hover {
+    transform: scale(1.15);
+}

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri projetos</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- ex 1 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p>function ex1(){<br>
+                let idade = window.prompt('Qual é sua idade?'); <br>
+                let res = window.document.getElementById('codigo'); <br>
+                if (isNaN(idade)) { <br>
+                alert('Isso não é um número. Por favor, digite um número válido.');
+                return;}
+                res.innerHTML = `<p>Sua idade é, <strong>${idade}</strong>!</p>`}
+            </p>
+        </div>
+        <div>
+            <h1>Exercício 1: variáveis</h1>
+            <p>Clique no botão para testar</p>
+            <button onclick="ex1()">Aqui</button>
+        </div>
+        <div id="codigo" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+        </div>
+    </section>
+    <hr>
+
+    <!-- ex 2 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p>function ex2() {<br>
+                let numero = prompt("Digite um número:");<br>
+                if (isNaN(numero)) {<br>
+                    numero = "Valor inválido";<br>
+                } else {<br>
+                    numero = Number(numero);<br>
+                }
+            
+                let texto = prompt("Digite um texto:");<br>
+                if (texto.trim() === "") {<br>
+                    texto = "Texto vazio";<br>
+                }
+            
+                let booleano = prompt("Digite 'true' ou 'false':");<br>
+                if (booleano.toLowerCase() !== 'true' && booleano.toLowerCase() !== 'false') {
+                    booleano = "Valor inválido";<br>
+                } else {<br>
+                    booleano = booleano.toLowerCase()<br>
+                }
+            
+                const resultadoHTML = `
+                    Resultados
+                    <p><strong>Número:</strong> ${numero}</p>
+                    <p><strong>Palavra:</strong> ${texto}</p>
+                    <p><strong>Booleano:</strong> ${booleano}</p>
+                    
+                    `;
+            
+                document.getElementById("codigo2").innerHTML = resultadoHTML;
+            }
+            </p>
+            
+        </div>
+        <div>
+            <h1>Exercício 2: Tipos <br>primitivos  </h1>
+            <p>Clique no botão para testar</p>
+            <button onclick="ex2()">Aqui</button>
+        </div>
+        <div id="codigo2" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+            
+        </div>
+    </section>
+    <hr>
+
+    <!-- ex 3 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p>
+                function operacao(){ <br>
+                    let res = window.document.getElementById('codigo3');<br>
+                    var a = eval(document.formcalc.t1.value);<br>
+                    var b = eval(document.formcalc.t2.value);<br>
+                    var c = a+b;<br>
+                    res.innerHTML = `O Resultado da soma é ${c}`;<br>
+                }
+                <br>
+                function operacao1(){<br>
+                    let res = window.document.getElementById('codigo3');   <br> 
+                    var a = eval(document.formcalc.t1.value);<br>
+                    var b = eval(document.formcalc.t2.value);<br>
+                    var c = a-b;<br>
+                    res.innerHTML = `O Resultado da subtraçao é ${c}`;<br>
+                }
+                <br>
+                function operacao2(){<br>
+                    let res = window.document.getElementById('codigo3');<br>
+                    var a = eval(document.formcalc.t1.value);<br>
+                    var b = eval(document.formcalc.t2.value);<br>
+                    var c = a*b;<br>
+                    res.innerHTML = `O Resultado da multiplicaçao é ${c}`;<br>
+                }
+            </p>
+            
+        </div>
+        <div>
+            <h1>Exercício 3: Operadores <br>aritméticos</h1>
+            <form name="formcalc">
+                <h2>Cálculo em JavaScript</h2>
+                Digite o primeiro número:<input type="text" name="t1" size="4" maxlenght="4">
+                <br><br>
+                Digite o segundo número:<input type="text" name="t2" size="4" maxlenght="4">
+                <br><br>
+
+                <input type="button" name="bt1" value="Calcular" onclick="operacao()">&nbsp&nbsp
+                <input type="button" name="bt2" value="Calcular subtração" onclick="operacao1()">&nbsp&nbsp <br> <br>
+                <input type="button" name="bt3" value="Calcular multiplicação" onclick="operacao2()">&nbsp&nbsp 
+                <input type="reset" name="bt4" value="Cancelar"onclick="document.formcalc.t1.focus()">&nbsp&nbsp
+                </form>
+        </div>
+        <div id="codigo3" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+            
+        </div>
+    </section>
+    <hr>
+
+    
+    <!-- ex 4 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p> function ex4() {
+                let res = document.getElementById('codigo4');
+                res.innerHTML = `<h1>Somente idades entre 17 e 18 anos podem entrar</h1>`;
+                let nome = window.prompt('Qual é seu nome?');
+                let idade = window.prompt('Qual é sua idade?');
+                if (idade < 15) {
+                    res.innerHTML += `<p>${nome}, você é muito jovem para entrar.</p>`;
+                } else if (idade >= 17 && idade <= 18) {
+                    res.innerHTML += `<p>Bem-vindo(a), ${nome}! Você pode entrar.</p>`;
+                } else {
+                    res.innerHTML += `<p>${nome}, sua idade não permite a entrada.</p>`;
+                }
+            </p>
+        </div>
+        <div>
+            <h1>Exercício 4: Operadores de comparação</h1>
+            <p>Clique no botão para testar</p>
+            <button onclick="ex4()">Aqui</button>
+        </div>
+        <div id="codigo4" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+        </div>
+    </section>
+    <hr>
+    <!-- ex 5 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p> function ex5() {
+                var input = document.getElementById("number").value
+                var resultado = document.getElementById("codigo5")
+                var numerocerto = 7
+                var numero = parseInt(input)
+                
+                if (isNaN(numero) || numero < 1 || numero > 10) {
+                    resultado.innerHTML = "Por favor, digite um número válido entre 1 e 10."
+                } else if (numero === numerocerto) {
+                    resultado.innerHTML = "Parabéns! Você adivinhou o número!"
+                } else if (numero >= 5 && numero <= 6) {
+                    resultado.innerHTML = "Número está perto."
+                } else if (numero >= 8 && numero <= 10) {
+                    resultado.innerHTML = "Número muito alto."
+                } else {
+                    resultado.innerHTML = "Número errado. Tente novamente!"
+                }
+            }
+            </p>
+        </div>
+        <div>
+            <h1>Exercício 5: Operadores lógicos</h1>
+            <p>Ache o numero entre 1 a 10</p>
+            <input type="text" id="number" name="t2" size="4" maxlength="4">
+            <button onclick="ex5()">Verificar</button>
+        </div>
+        <div id="codigo5" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+        </div>
+    </section>
+    <hr>
+
+    <!-- ex 6 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p>function ex6() {
+                var input = document.getElementById("senha").value
+                var resultado = document.getElementById("codigo6")
+                var paragrafo = document.getElementById("troca")
+                var senhacerta = 1234
+                var senhatroll = 5678
+                var numero = parseInt(input)
+                
+                if (isNaN(numero)) {
+                    resultado.innerHTML = "Por favor, digite um número."
+                } 
+                else if (numero === senhatroll) {
+                    resultado.innerHTML = "Acesso Permitido..."
+                    setTimeout(function() {
+                        alert("Surpresa! Você foi trollado ")
+                        paragrafo.innerHTML = "<h2>A senha é 1234</h2>"
+                    }, 1000)
+                }
+                else if (numero != senhacerta) {
+                    resultado.innerHTML = "Acesso negado"
+                }
+                else {
+                    resultado.innerHTML = "Acesso Permitido!"
+                }
+            } 
+            </p>
+        </div>
+        <div>
+            <h1>Exercício 6: Estruturas condicionais</h1>
+            <p id=troca>Digite a senha correta:
+                senha e 5678
+            </p>
+            <input type="text" id="senha" name="t2" size="4" maxlength="4">
+            <button onclick="ex6()">Confirmar</button>
+        </div>
+        <div id="codigo6" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+        </div>
+    </section>
+    <hr>
+    <!-- ex 7 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p>function ex7() {
+                var input = document.getElementById("repetir").value
+                var resultado = document.getElementById("codigo7")
+                var repeticao = ""
+        
+                for (var i = 0; i < 5; i++) {
+                    repeticao += input + "<br>"
+                }
+        
+                resultado.innerHTML = repeticao
+                } 
+            </p>
+        </div>
+        <div>
+            <h1>Exercício 7: Estruturas de repetição</h1>
+            <p>Digite uma palavra para repetir
+            </p>
+            <input type="text" id="repetir" name="t2" size="4" maxlength="10">
+            <button onclick="ex7()">Confirmar</button>
+        </div>
+        <div id="codigo7" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+        </div>
+    </section>
+    <hr>
+    <!-- ex 8 ---------------------------------------------------------------------------->
+    <section class="primeira">
+        <div id="resultado">
+            <p>  function ex8() {
+                var nome = document.getElementById('nome').value
+                var mensagem = "Olá, " + nome + "!"
+                document.getElementById("codigo8").innerText = mensagem
+                }
+            </p>
+        </div>
+        <div>
+            <h1>Exercício 8: Funções</h1>
+            <p>Saudação
+            </p>
+            <input type="text" id="nome" name="t2" maxlength="10" placeholder="Digite seu nome">
+            <button onclick="ex8()">Saudar</button>
+        </div>
+        <div id="codigo8" class="codigoo">
+            <p>Vai aparecer aqui!</p>
+        </div>
+    </section>
+    <hr>
+    <h1> Yuri Dos Santos Silva</h1>
+    <script>
+
+ //Exercicio 1 script --------------------------------------------------------------------------
+    function ex1(){
+        let idade = window.prompt('Qual é sua idade?')
+        let res = window.document.getElementById('codigo')
+        if (isNaN(idade)) {
+            alert('Isso não é um número. Por favor, digite um número válido.')
+            return;
+        }
+        res.innerHTML = `<p>Sua idade é, <strong>${idade}</strong>!</p>`
+    }
+
+//Exercicio 2 script --------------------------------------------------------------------------
+function ex2() {
+    let numero = prompt("Digite um número:")
+    if (isNaN(numero)) {
+        numero = "Valor inválido"
+    } else {
+        numero = Number(numero)
+    }
+
+    let texto = prompt("Digite uma palavra:")
+    if (texto.trim() === "") {
+        texto = "Texto vazio"
+    }
+
+    let booleano = prompt("Digite 'true' ou 'false':")
+    if (booleano.toLowerCase() !== 'true' && booleano.toLowerCase() !== 'false') {
+        booleano = "Valor inválido"
+    } else {
+        booleano = booleano.toLowerCase()
+    }
+
+    const resultadoHTML = `
+        <h1>Resultados</h1>
+        <p><strong>Número:</strong> ${numero}</p>
+        <p><strong>Palavra:</strong> ${texto}</p>
+        <p><strong>Booleano:</strong> ${booleano}</p>
+        `
+
+    document.getElementById("codigo2").innerHTML = resultadoHTML
+}
+
+//Exercicio 3 script --------------------------------------------------------------------------
+    function operacao(){
+        let res = window.document.getElementById('codigo3')
+        var a = eval(document.formcalc.t1.value)
+        var b = eval(document.formcalc.t2.value)
+        var c = a+b
+        res.innerHTML = `<h1>O Resultado da soma é ${c}<h1>`
+    }
+
+    function operacao1(){
+        let res = window.document.getElementById('codigo3') 
+        var a = eval(document.formcalc.t1.value)
+        var b = eval(document.formcalc.t2.value)
+        var c = a-b
+        res.innerHTML = `<h1>O Resultado da subtraçao é ${c}<h1>`
+    }
+
+    function operacao2(){
+        let res = window.document.getElementById('codigo3')
+        var a = eval(document.formcalc.t1.value)
+        var b = eval(document.formcalc.t2.value)
+        var c = a*b
+        res.innerHTML = `<h1>O Resultado da multiplicaçao é ${c}<h1>`
+    }
+
+//Exercicio 4 script --------------------------------------------------------------------------
+    function ex4() {
+    let res = document.getElementById('codigo4')
+    res.innerHTML = `<h1>Somente idades entre 17 e 18 anos podem entrar</h1>`
+    let nome = window.prompt('Qual é seu nome?')
+    let idade = window.prompt('Qual é sua idade?')
+    if (idade < 15) {
+        res.innerHTML += `<p>${nome}, você é muito jovem para entrar.</p>`
+    } else if (idade >= 17 && idade <= 18) {
+        res.innerHTML += `<p>Bem-vindo(a), ${nome}! Você pode entrar.</p>`
+    } else {
+        res.innerHTML += `<p>${nome}, sua idade não permite a entrada.</p>`
+    }
+}
+
+//Exercicio 5 script --------------------------------------------------------------------------
+function ex5() {
+    var input = document.getElementById("number").value
+    var resultado = document.getElementById("codigo5")
+    var numerocerto = 7
+    var numero = parseInt(input)
+    
+    if (isNaN(numero) || numero < 1 || numero > 10) {
+        resultado.innerHTML = "Por favor, digite um número válido entre 1 e 10."
+    } else if (numero === numerocerto) {
+        resultado.innerHTML = "Parabéns! Você adivinhou o número!"
+    } else if (numero >= 5 && numero <= 6) {
+        resultado.innerHTML = "Número está perto."
+    } else if (numero >= 8 && numero <= 10) {
+        resultado.innerHTML = "Número muito alto."
+    } else {
+        resultado.innerHTML = "Número errado. Tente novamente!"
+    }
+}
+//Exercicio 6 script --------------------------------------------------------------------------
+    function ex6() {
+        var input = document.getElementById("senha").value
+        var resultado = document.getElementById("codigo6")
+        var paragrafo = document.getElementById("troca")
+        var senhacerta = 1234
+        var senhatroll = 5678
+        var numero = parseInt(input)
+        
+        if (isNaN(numero)) {
+            resultado.innerHTML = "Por favor, digite um número."
+        } 
+        else if (numero === senhatroll) {
+            resultado.innerHTML = "Acesso Permitido..."
+            setTimeout(function() {
+                alert("Surpresa! Você foi trollado ")
+                paragrafo.innerHTML = "<h2>A senha é 1234</h2>"
+            }, 1000)
+        }
+        else if (numero != senhacerta) {
+            resultado.innerHTML = "Acesso negado"
+        }
+        else {
+            resultado.innerHTML = "Acesso Permitido!"
+        }
+    }
+//Exercicio 7 script --------------------------------------------------------------------------
+        function ex7() {
+        var input = document.getElementById("repetir").value
+        var resultado = document.getElementById("codigo7")
+        var repeticao = ""
+
+        for (var i = 0; i < 5; i++) {
+            repeticao += input + "<br>"
+        }
+
+        resultado.innerHTML = repeticao
+        }
+//Exercicio 8 script --------------------------------------------------------------------------
+        function ex8() {
+        var nome = document.getElementById('nome').value
+        var mensagem = "Olá, " + nome + ", espero que tenha gostado do meu site!"
+        document.getElementById("codigo8").innerText = mensagem
+        }
+
+    </script>
+</body>
+</html>
